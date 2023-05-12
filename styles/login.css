@@ -1,7 +1,7 @@
 *{
     font-family: 'Habibi', serif;
 }
-.header{
+.header2{
     height: 100vh;
     width: 100%;
 }
@@ -14,9 +14,9 @@ body{
     flex-direction: column ;
 }
 
-/* CSS da navbar */
+/* NAVBAR */
 
-nav .logo img{
+/* nav .logo img{
     width: 40px;
     padding: 40px;
     padding-right: 10px;
@@ -50,6 +50,9 @@ nav ul li a{
     text-decoration: none;
     color: black;
 }
+nav h1{
+    color: black;
+} */
 
 /* nav button{
     border-radius: 60px;
@@ -62,44 +65,61 @@ nav ul li a{
     width: 45px;
     margin-right: 15px;
     margin-top: 6px;
-    padding: 50px;
 }
 
 
-/* CONTAINER DA PÁGINA INICIAL */
+/* Container da pagina de login */
 
-.containerInicial{
-    display: flex;
-    flex-direction: row;
-}
-
-.containerInicial .informacoesInicial{
-    width: 70%;
-}
-.informacoesInicial h1{
-    color: white;
-    padding: 15px;
+#containerLogin{
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-image: url(img/expresso2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-.containerInicial .imgInicial{
-    width: 30%;
+.loginUsuario{
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    /* border: solid 1px white;
+    border-radius: 15px; */
+    /* background-color: white; */
+    align-items: center;
 }
-.imgInicial img{
-    width: 85%;
-    height: auto;
+
+img{
+    width: 230px;
+    padding: 50px;
+}
+h1{
+    color: white;
+}
+h3{
+    color: white;
 }
 
+input{
+    width: 300px;
+    padding: 8px;
+    /* background-color: #00151C; */
+    color: white;
+    border-color: white;
+    border-radius: 8px;
+}
 
-/* CONTAINER PÁGINA HISTÓRIA */
+button{
+    border-radius: 20px;
+    border-color: white;
+    background-color: #ffffff;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    width: 150px;
+}
 
-.containerHistoria{
-    width: 100px;
-    height: 100px;
-    background-color: white;
-
+.imgVarinha img{
+    width: 280px;
 }
 
