@@ -83,6 +83,19 @@ nav ul li a{
     justify-content: center;
 }
 
+.txtInicial{
+    margin: 20px;
+    width: 500px;
+}
+.informacoesInicial .txtInicial h3{
+    color: white;
+    font-size: 22px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerInicial .imgInicial{
     width: 30%;
     display: flex;
@@ -117,7 +130,16 @@ nav ul li a{
     padding-left: 15px;
 }
 
+
+.containerHistoria .informacoesHistoria{
+    display: flex;
+    flex-direction: row ;
+}
 .containerHistoria .informacoesHistoria img{
-    width: 350px;
-    height: 350px;
+    width: 600px;
+    height: 600px;
+    padding: 8px;
+}
+.containerHistoria .informacoesHistoria p{
+    font-size: 18px;
 }

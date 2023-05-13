@@ -16,7 +16,7 @@ body{
 
 /* NAVBAR */
 
-/* nav .logo img{
+nav .logo img{
     width: 40px;
     padding: 40px;
     padding-right: 10px;
@@ -52,7 +52,7 @@ nav ul li a{
 }
 nav h1{
     color: black;
-} */
+}
 
 /* nav button{
     border-radius: 60px;
@@ -74,8 +74,8 @@ nav h1{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-image: url(img/expresso2.jpg);
+    align-items: center; 
+    background-image: url("img/Plataforma.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -123,3 +123,14 @@ button{
     width: 280px;
 }
 
+
+.loginUsuario{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 8px 32px 0 rgba(0,0,0,0.37);
+    width: 450px;
+    height: 380px;
+}
