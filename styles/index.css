@@ -156,3 +156,53 @@ nav ul li a{
 .containerHistoria .informacoesHistoria p{
     font-size: 18px;
 }
+
+
+/* CONTAINER PÁGINA PERSONAGENS! */
+
+.containerPersonagens{
+    display: flex;
+    flex-direction: column;
+}
+.tituloPersonagens{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.containerPersonagens .tituloPersonagens img{
+    width: 45px;
+    height: 50px;
+    padding-top: 25px;
+    padding-right: 15px;
+}
+.containerPersonagens .tituloPersonagens h1{
+    color: white;
+    padding: 15px;
+}
+
+.containerPersonagens .primeiraLinha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.containerPersonagens .primeiraLinha h4{
+    color: white;
+    display: flex;
+    text-align: center;
+}
+.containerPersonagens .primeiraLinha img{
+    width: 250px;
+    height: 350px;
+}
+
+.containerPersonagens .segundaLinha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.containerPersonagens .segundaLinha h4{
+    color: white;
+}
+.containerPersonagens .segundaLinha img{
+    width: 250px;
+    height: 350px;
+}
