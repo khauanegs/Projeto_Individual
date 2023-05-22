@@ -1,0 +1,20 @@
+const cards = [
+    {Nome: 'Hermione Granger',
+    Casa: 'Grifinória',
+    Sobre: 'Hermione é uma bruxa nascida trouxa e é melhor amiga de Harry e Rony. Muito conhecida por sua inteligência e dedicação aos estudos.'},
+    {Nome: 'Harry Poter',
+    Casa: 'Grifinória',
+    Sobre: 'Harry é o nosso personagem principal, ele é conhecido por ter sobrevivido ao ataque do bruxo das trevas, Lord Voldemort, e por se tornar um grande herói na luta contra as forças das trevas.'},
+    {Nome: 'Rony Weasley',
+    Casa: 'Grifinória',
+    Sobre: 'Rony, melhor amigo do Harry, é engraçado e leal, está com os amigos para o que der e vier, mesmo que isso signifique enfrentar seus medos.'},
+    {Nome: 'Rúbeo Hagrid',
+    Casa: 'Grifinória',
+    Sobre: 'Um meio-gigante que trabalha como guarda-caça em Hogwarts. Ele é muito amigável e tem um coração enorme. Hagrid é muito leal a Dumbledore e aos alunos de Hogwarts, e muitas vezes ajuda Harry, Ron e Hermione em suas aventuras.'},
+    {Nome: 'Alvo Dumbledore',
+    Casa: 'Grifinória',
+    Sobre: 'O diretor de Hogwarts e um dos bruxos mais poderosos de sua geração. Ele é muito sábio, e é conhecido por sua habilidade em derrotar as forças das trevas. Dumbledore é muito leal aos seus alunos e foi uma peça importante para derrotar Voldermort.'},
+    {Nome: 'Severo Snape',
+    Casa: 'Sonserina',
+    Sobre: 'É o professor de poções de Hogwarts, é bem conhecido por ser intimidador. Ele tem uma relação tensa com os nossos perosnagens principais, porém é leal a Dumbledore, e ao longo da série conheceremos o seu passado.'}
+];

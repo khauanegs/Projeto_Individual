@@ -21,9 +21,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-image: url("/Projeto_Individual/img/expresso2.jpg");
-    background-size: cover;
-    background-position: center;
+    flex-direction: column;
+}
+
+#containerLogin img{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 .loginUsuario{
@@ -33,6 +39,8 @@ body{
     border-radius: 15px; */
     /* background-color: white; */
     align-items: center;
+    position: absolute;
+    top: 150px;
 }
 
 img{
@@ -50,7 +58,7 @@ input{
     width: 300px;
     padding: 8px;
     /* background-color: #00151C; */
-    color: white;
+    color: black;
     border-color: white;
     border-radius: 8px;
 }
@@ -65,9 +73,6 @@ button{
     width: 150px;
     cursor: pointer;
 }
-
-
-
 
 .loginUsuario{
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
