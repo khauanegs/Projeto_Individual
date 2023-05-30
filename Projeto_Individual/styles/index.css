@@ -205,6 +205,7 @@ nav ul li a{
 .containerPersonagens .primeiraLinha img{
     width: 250px;
     height: 350px;
+    border-radius: 25px;
 }
 
 .containerPersonagens .segundaLinha{
@@ -220,6 +221,7 @@ nav ul li a{
 .containerPersonagens .segundaLinha img{
     width: 250px;
     height: 350px;
+    border-radius: 25px;
 }
 
 /* SOBRE MIM */
