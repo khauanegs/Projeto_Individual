@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/votacao.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav id="inicial">
+        <div class="logo">
+            <img src="img/reliquias-da-morte.png" alt="logo">
+            <h1>PotterClub</h1>
+        </div>
+        <ul>
+            <li><a href="profetaDiario.html">Profeta diário</a></li>
+            <li><a href="cruzadinha.html">Cruzadinha</a></li>
+            <li><a href="votacao.html">Vote</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="imgEntrar">
+            <a href="index.html"><img src="img/sair.png" alt="entrar"></a>
+        </div>
+    </nav>
+
+    <div class="corpo">
+
+        <div class="tituloVotacao">
+            <img src="./img/varinha-magicaBranca.png">
+            <h1>Vote no seu personagem preferido!</h1>
+        </div>
+
+        <div class="Personagens">
+            <div class="pLinha">
+                <div class="linhas">
+                    <img src="./img/harry.jpg">
+                    <button onclick="escolher(1)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/hermione.jpg">
+                    <button onclick="escolher(2)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/rony.jpg">
+                    <button onclick="escolher(3)">Vote</button>
+                </div>
+            </div>
+
+            <div class="sLinha">
+                <div class="linhas">
+                    <img src="./img/dracoMalfoy.jpg">
+                    <button onclick="escolher(4)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/ginaWeasley.jpg">
+                    <button onclick="escolher(5)">Vote</button>
+                </div>
+            </div>
+
+            <div class="tLinha">
+                <div class="linhas">
+                    <img src="./img/hagrid.jpg">
+                    <button onclick="escolher(6)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/alvo.jpg">
+                    <button onclick="escolher(7)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/snape.jpg">
+                    <button onclick="escolher(8)">Vote</button>
+                </div>
+            </div>
+
+            <div class="qLinha">
+                <div class="linhas">
+                    <img src="./img/remoLupin.jpg">
+                    <button onclick="escolher(9)">Vote</button>
+                </div>
+                <div class="linhas">
+                    <img src="./img/siriusBlack.jpg">
+                    <button onclick="escolher(10)">Vote</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    function escolher(idPersonagem) {
+
+        var idUsuario = sessionStorage.getItem("ID_USUARIO")
+        var idPersonagem = idPersonagem
+
+        Swal.fire({
+            title: 'Tem certeza?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#036400',
+            cancelButtonColor: '#d33',
+            timer: 10000,
+            confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                console.log(idUsuario)
+                console.log(idPersonagem)
+                fetch(`/votar/votar/${idUsuario}/${idPersonagem}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                }).then(function (resposta) {
+                    console.log("ESTOU NO THEN DO entrar()!")
+
+                    if (resposta.ok) {
+                        console.log(resposta);
+
+                        resposta.json().then(json => {
+                            console.log(json);
+                            console.log(JSON.stringify(json));
+                            Swal.fire(
+                                'Votado!',
+                                'Voto confirmado com sucesso!',
+                                'success'
+                            )
+                            setTimeout(function () {
+                                window.location = "./dashboard.html";
+                            }, 2000); // apenas para exibir o loading
+
+                        });
+
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Ocorreu algum erro!'
+                        })
+
+                        resposta.text().then(texto => {
+                            console.error(texto);
+
+                        });
+                    }
+
+                }).catch(function (erro) {
+                    console.log(erro);
+                })
+
+                return false;
+            }
+        })
+    }
+</script>

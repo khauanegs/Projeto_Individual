@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="containerCadastro">
+        <img src="./img/expresso2.jpg" alt="backgroundExpresso">
+
+        <div class="cadastroUsuario">
+
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+
+            <h1>Crie sua conta</h1>
+
+            <div class="divisao">
+                <div class="divi">
+                    <div class="nome">
+                        <h3>Nome:</h3>
+                        <input id="nome_input" placeholder="Seu nome" type="text">
+                    </div>
+        
+                    <div class="sobrenome">
+                        <h3>Sobrenome:</h3>
+                        <input id="sobrenome_input" placeholder="Sobrenome" type="text">
+                    </div>
+                </div>
+    
+                <div class="divi">
+                    <div class="email">
+                        <h3>E-mail:</h3>
+                        <input id="email_input" placeholder="magia@gmail.com" type="email">
+                    </div>
+        
+                    <div class="senha">
+                        <h3>Senha:</h3>
+                        <input id="senha_input" placeholder="password" type="password">
+                    </div>
+                </div>
+            </div>
+            <a href="#"><button onclick="cadastrar()">CADASTRAR</button></a>
+            <div class="voltar">
+                <a href="./login.html"><p>Já tem conta? Entre aqui.</p></a>
+            </div>
+        </div>
+    </div>
+</body>
+<div id="div_erros_login"></div>
+</html>
+
+<script>
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var sobrenomeVar = sobrenome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

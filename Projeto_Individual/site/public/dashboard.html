@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/dash.css">
+    <script src="./js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav id="inicial">
+        <div class="logo">
+            <img src="img/reliquias-da-morte.png" alt="logo">
+            <h1>PotterClub</h1>
+        </div>
+        <ul>
+            <li><a href="profetaDiario.html">Profeta diário</a></li>
+            <li><a href="cruzadinha.html">Cruzadinha</a></li>
+            <li><a href="votacao.html">Vote</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="imgEntrar">
+            <a href="index.html"><img src="img/sair.png" alt="entrar"></a>
+        </div>
+    </nav>
+
+    <div class="containerDash">
+        <div class="dashVotos">
+            <h1>Total de votos de cada personagem</h1>
+            <canvas id="telaGrafico"></canvas>
+        </div>
+
+        <div class="dashPorcentagem">
+            <h1>Porcentagem</h1>
+            <canvas id="graficoPorcentagem"></canvas>
+        </div>
+    </div>
+</body>
+</html>

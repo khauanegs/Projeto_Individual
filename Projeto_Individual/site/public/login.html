@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>PotterClub</title>
+    <link rel="shortcut icon" href="img/reliquias-da-morte.png" type="image/x-icon">
+</head>
+<body>
+    <!-- <nav>
+        <div class="logo">
+            <img src="img/reliquias-da-morte.png" alt="logo">
+            <h1>PotterClub</h1>
+        </div>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">história</a></li>
+            <li><a href="#">personagens</a></li>
+            <li><a href="#">sobre</a></li>
+        </ul>
+        <div class="imgEntrar">
+            <a href="#"><img src="/img/entrar2.png" alt=""></a>
+        </div>
+    </nav> -->
+        
+    <div id="containerLogin">
+        <img src="./img/expresso2.jpg" alt="backgroundExpresso">
+        
+        <div class="loginUsuario">
+
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+        
+            <h1>Atravesse a plataforma 9 ¾</h1>
+
+            <div class="email">
+                <h3>E-mail</h3>
+                <input id="email_input" placeholder="magia@gmail.com" type="text">
+            </div>
+
+            <div class="senha">
+                <h3>Senha</h3>
+                <input id="senha_input" placeholder="password" type="password">
+            </div>
+            <a href="./cadastro.html"><p>Não tem conta? <b>Cadastre-se</b></p></a>
+            <button onclick="entrar()">LOGIN</button>
+            <div class="voltar">
+                <a href="./index.html"><p>Voltar</p></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+    function entrar(){
+        // aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "./profetaDiario.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

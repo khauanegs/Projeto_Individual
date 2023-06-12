@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/cruzadinha.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="cruzadinha.js"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Cruzadinha</title>
+</head>
+
+<body>
+    <nav id="inicial">
+        <div class="logo">
+            <img src="img/reliquias-da-morte.png" alt="logo">
+            <h1>PotterClub</h1>
+        </div>
+        <ul>
+            <li><a href="profetaDiario.html">Profeta diário</a></li>
+            <li><a href="cruzadinha.html">Cruzadinha</a></li>
+            <li><a href="votacao.html">Vote</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="imgEntrar">
+            <a href="index.html"><img src="img/sair.png" alt="entrar"></a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="form">
+            <p class="form-title">Complete!</p>
+            <div class="form-content">
+                <span>1. A cicatriz não incomodara ........ nos últimos dezenove anos. Tudo estava bem.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="dmas" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(harryPotter, 1)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>2. Quem sabe sua morada é a ........ casa onde habitam os corações indômitos.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="cache" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(grifinoria, 2)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>3. ou será a velha e sábia ........ a casa dos que tem a mente sempre alerta, onde os homens de grande espírito e saber sempre encontrarão companheiros seus iguais.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="flash" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(corvinal, 3)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>4. Os senhores Aluado, Rabicho, Almofadinhas e Pontas têm o orgulho de apresentar O .........</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="databus" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(mapaMarotos, 4)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>5. Quem sabe é na ........ que você vai morar, onde seus moradores são justos e leais pacientes, sinceros, sem medo da dor.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="massa" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(lufalufa, 5)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>6. quem sabe a ........ será a sua casa e ali fará seus verdadeiros amigos, homens de astúcia que usam quaisquer meios para atingir os fins que antes colimaram.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="threads" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(sonserina, 6)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>7. Senhor Aluado.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="eprom" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(lupin, 7)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>8. Senhor Rabicho.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="cpu" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(pedro, 8)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>9. Senhor Almofadinhas.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="dualcore" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(sirius, 9)">Validar</button>
+                </div>
+            </div>
+            <div class="form-content">
+                <span>10. Senhor Pontas.</span>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input id="cs" type="text">
+                    </div>
+                    <button class="submit" onclick="validar(tiago, 10)">Validar</button>
+                </div>
+            </div>
+        </div>
+        <div class="crosswords" id="cruzadinha">
+            <h1>Cruzadinha</h1>
+    
+            <table class="tabelas">
+                <tr>
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">6.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                <tr>
+                    <!-- primeira linha -->
+                    <!-- coluna 1 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">S</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 2 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 3 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">2.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">G</div>
+                        </div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">F</div>
+                        </div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina grifinoria">N</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra grifinoria">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 4 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">S</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 5 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">E</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 6 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 7 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">1.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 8 -->
+                    <!-- coluna 1 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">H</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina">N</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 9 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="numeracao">
+                            <div class="numero">5.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">L</div>
+                        </div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">U</div>
+                        </div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">F</div>
+                        </div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra sonserina lufalufa">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">L</div>
+                        </div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">U</div>
+                        </div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">F</div>
+                        </div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra lufalufa">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 10 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 11 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 12 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">Y</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 13 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">P</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 14 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">3.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">C</div>
+                        </div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">V</div>
+                        </div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">N</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra corvinal">L</div>
+                        </div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 15 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">T</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 16 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">T</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">8.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 17 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">E</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">9.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">L</div>
+                        </div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">U</div>
+                        </div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">P</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">N</div>
+                        </div>
+                    </td>
+                    <!-- linha 20 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">7.</div>
+                        </div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 18 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="numeracao">
+                            <div class="numero">4.</div>
+                        </div>
+                    </td>
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">M</div>
+                        </div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">P</div>
+                        </div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">D</div>
+                        </div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">S</div>
+                        </div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">M</div>
+                        </div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">T</div>
+                        </div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 14 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra mapaMarotos">S</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">E</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <!-- linha 19 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <!-- coluna 14 -->
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">D</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!-- linha 20 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <!-- coluna 14 -->
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">R</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!-- linha 21 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="numeracao">
+                            <div class="numero">10.</div>
+                        </div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">T</div>
+                        </div>
+                    </td>
+                     <!-- coluna 14 -->
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra">I</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">A</div>
+                        </div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">G</div>
+                        </div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="blocoResposta">
+                            <div class="letra">O</div>
+                        </div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!-- linha 22 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <!-- coluna 14 -->
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra">U</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <!-- linha 23 -->
+                     <!-- coluna 1 -->
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 2 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 3 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 4 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 5 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 6 -->
+                    <td>    
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 7 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 8 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 9 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 10 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 11 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 12 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 13 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                     <!-- coluna 14 -->
+                     <td>
+                        <div class="blocoResposta">
+                            <div class="letra">S</div>
+                        </div>
+                    </td>
+                    <!-- coluna 15 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 16 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 17 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 18 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+                    <!-- coluna 19 -->
+                    <td>
+                        <div class="nulo"></div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Copyright 2023 &copy; | Criadora: Khauane Guilhermino.</h2>
+    </footer> 
+</body>
+
+</html>
+
+<script src="cruzadinha.js"></script>
