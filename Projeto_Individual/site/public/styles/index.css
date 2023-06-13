@@ -321,7 +321,7 @@ nav ul li:hover{
 }
 
 .audio{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     justify-content: center;
 }
