@@ -13,7 +13,7 @@ var palavraTiago = document.getElementsByClassName('tiago');
 var listaRespostas = [
     {
         pergunta: 1,
-        resposta: "harrypotter"
+        resposta: "harry potter"
     },
     {
         pergunta: 2,
@@ -25,7 +25,7 @@ var listaRespostas = [
     },
     {
         pergunta: 4,
-        resposta: "mapadosmarotos"
+        resposta: "mapa dos marotos"
     },
     {
         pergunta: 5,
